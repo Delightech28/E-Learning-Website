@@ -1,19 +1,3 @@
-<?php
-    include("server/connection.php");
-
-    if(isset($_POST['submit'])){
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        $sql  = "INSERT INTO user (user_name, user_email, user_password) VALUES ($name, $email, $password)";
-        $result = $conn->query($sql);
-
-        if($result->num_rows){
-            header("Location: index.php");
-        }
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
